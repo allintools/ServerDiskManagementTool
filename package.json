@@ -1,0 +1,41 @@
+{
+  "name": "nova-rack",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "allintools",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "tauri": "tauri",
+    "desktop:dev": "tauri dev",
+    "desktop:build": "tauri build",
+    "check:frontend": "vue-tsc --noEmit",
+    "check:rust": "cd src-tauri && cargo test",
+    "test:e2e": "playwright test",
+    "test:ssh": "bash tests/ssh/run.sh",
+    "test:windows:smoke": "powershell -NoProfile -ExecutionPolicy Bypass -File tests/windows/smoke.ps1",
+    "test:windows:askpass": "powershell -NoProfile -ExecutionPolicy Bypass -File tests/windows/askpass.ps1"
+  },
+  "dependencies": {
+    "lucide-vue-next": "^0.468.0",
+    "vue": "^3.5.22",
+    "@tauri-apps/api": "^2.12.4",
+    "@tauri-apps/plugin-dialog": "^2.8.3",
+    "@tauri-apps/plugin-opener": "^2.7.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.9",
+    "vue-tsc": "^3.1.1",
+    "@tauri-apps/cli": "^2.12.3",
+    "@playwright/test": "^1.49.1"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "description": "ServerDiskManagementTool - remote Linux disk fleet console"
+}

@@ -1,0 +1,49 @@
+@@meta
+os=Linux
+kernel=6.1.0-18-amd64
+arch=x86_64
+hostname=fixture-debian
+distro=Debian GNU/Linux 12 (bookworm)
+uptime_secs=987654
+cpu_count=4
+memory_total_bytes=4294967296
+load1=0.42
+containerized=0
+@@df
+Filesystem     1024-blocks      Used Available Capacity Mounted on
+/dev/vda1         20971520   8388608  12582912      40% /
+/dev/vdb1        104857600  85983232  18874368      82% /data
+/dev/vdc1         10485760   1048576   9437184      10% /mnt/backup
+@@dfi
+Filesystem      Inodes  IUsed   IFree IUse% Mounted on
+/dev/vda1      1310720 123456  1187264   10% /
+/dev/vdb1      6553600 1234567 5319033   19% /data
+/dev/vdc1       655360  12345   643015    2% /mnt/backup
+@@mounts
+/dev/vda1 / ext4 rw,relatime 0 0
+/dev/vdb1 /data xfs rw,relatime,attr2,inode64,logbufs=8 0 0
+/dev/vdc1 /mnt/backup ext4 ro,relatime 0 0
+@@lsblk
+{
+   "blockdevices": [
+      {"name":"vda", "kname":"vda", "type":"disk", "size":107374182400, "ro":false, "rota":false, "fstype":null, "mountpoints":[null], "model":"QEMU HARDDISK", "serial":"fixture-disk-1"}
+   ]
+}
+@@caps
+lsblk=1
+journalctl=1
+systemctl=1
+docker=0
+timeout=1
+apt-get=1
+dnf=0
+yum=0
+pacman=0
+apk=0
+du0=1
+gnufind=1
+sudo_nopass=1
+uid=1000
+shell=sh
+@@end
+__NONCE__

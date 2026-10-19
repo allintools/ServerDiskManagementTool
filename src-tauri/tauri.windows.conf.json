@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "服务器硬盘管理工具",
+        "width": 1200,
+        "height": 680,
+        "minWidth": 960,
+        "minHeight": 600,
+        "center": true,
+        "resizable": true,
+        "maximized": false
+      }
+    ]
+  },
+  "bundle": {
+    "targets": ["nsis"],
+    "publisher": "allintools",
+    "copyright": "Copyright © 2026 allintools",
+    "windows": {
+      "bundleVCRuntime": true,
+      "webviewInstallMode": {
+        "type": "embedBootstrapper",
+        "silent": true
+      },
+      "nsis": {
+        "installMode": "currentUser",
+        "languages": ["SimpChinese", "English"],
+        "installerIcon": "icons/icon.ico",
+        "uninstallerIcon": "icons/icon.ico"
+      }
+    }
+  }
+}
